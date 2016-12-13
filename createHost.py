@@ -6,14 +6,6 @@ from lib.configParse import configParse
 
 config_file = './conf/zabbix_api.conf'
 
-def getTemplateID(templateName=None):
-    try:
-        templateID = zapi.get_id('template', templateName)
-        return templateID
-    except:
-        print "Error: No templateid found on template %s" % templateName
-        sys.exit(1)
-
 def createHost(hostName=None, hostIP='127.0.0.1', hostPort='10050', groupID=None, templateID=None):
     data = {
         'host': hostName,
