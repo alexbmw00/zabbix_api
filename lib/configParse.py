@@ -13,7 +13,7 @@ class configParse:
         try:
             self.zabbix_url = self.config.get('zabbix', 'zabbix_url')
         except:
-            self.zabbix_url = 'https://zabbix-qa.service.chinanetcloud.com/api_jsonrpc.php'
+            self.zabbix_url = 'http://zabbix.com/api_jsonrpc.php'
 
         try:
             self.zabbix_user = self.config.get('zabbix', 'zabbix_user')
